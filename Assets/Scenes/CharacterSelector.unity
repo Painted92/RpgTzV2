@@ -1072,9 +1072,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2081679832}
-        m_TargetAssemblyTypeName: UnitSelect, Assembly-CSharp
-        m_MethodName: GenerateRandomCharacter
+      - m_Target: {fileID: 1721218047}
+        m_TargetAssemblyTypeName: UIModul, Assembly-CSharp
+        m_MethodName: GenerateCharacter
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

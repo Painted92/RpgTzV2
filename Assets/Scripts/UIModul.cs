@@ -1,30 +1,19 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class UIModul : UnitSelect
+public class UIModul : MonoBehaviour
 {
-    private void Awake()
-    {
-        EventSystemTZ.generatorEvents.AddListener(GenerateRandomCharacter);
-        EventSystemTZ.playEvents.AddListener(PlayGameScene);
-        EventSystemTZ.backEvents.AddListener(BackMenu);
-    }
     public void GenerateCharacter()
     {
-        EventSystemTZ.SendGeneratCharacter();
+        SelectCharacterEventSystem.SendGeneratCharacter();
     }
     public void PlayMode()
     {
-        EventSystemTZ.PlayCharacter();
+        SceneManager.LoadScene(1);
     }
     public void BackMainMenu()
     {
-        EventSystemTZ.BackMenu();
+        SceneManager.LoadScene(0);
     }
-
-    private static void BackMenu() => SceneManager.LoadScene(0);
-    private static void PlayGameScene() => SceneManager.LoadScene(1);
 }
 

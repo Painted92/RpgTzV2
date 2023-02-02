@@ -1,11 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class LoadGamesScene : UnitSelect
 {
     [SerializeField] private GameObject[] parentCharacter;
     private int selectedCharaterGamesScene;
+    private const string SAVE_RPEF = "selectedCharacter";
     void Start() => StartScene();
     private void StartScene()
     {
@@ -22,5 +21,5 @@ public class LoadGamesScene : UnitSelect
 
         parentCharacter[selectedCharaterGamesScene].SetActive(true);
     }
-    private void LoadSelectedCharacter() => selectedCharaterGamesScene = PlayerPrefs.GetInt("selectedCharacter");
+    private void LoadSelectedCharacter() => selectedCharaterGamesScene = PlayerPrefs.GetInt(SAVE_RPEF);
 }

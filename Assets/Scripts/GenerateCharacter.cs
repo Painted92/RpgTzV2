@@ -3,7 +3,7 @@
 public class GenerateCharacter 
 {
     public int numberCharacter; 
-    public GenerateCharacter(int characterLenght) // конструктор рандомайзер принимает в себя длинну масива обьектов. и возвращает случайное число из длинны масива.
+    public GenerateCharacter(int characterLenght) 
     {
         for (int i = 0; i < characterLenght; i++)
         {
